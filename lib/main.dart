@@ -30,7 +30,7 @@ class _TipCalculatorState extends State<TipCalculator> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 38.0),
+            padding: const EdgeInsets.only(top: 70.0,bottom: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -99,7 +99,7 @@ class _TipCalculatorState extends State<TipCalculator> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("\$"),
+                    Text("\$",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
                     Text("111", style: TextStyle(fontSize: 60)),
                   ],
                 ),
