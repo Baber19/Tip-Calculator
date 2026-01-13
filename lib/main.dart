@@ -100,7 +100,7 @@ class _TipCalculatorState extends State<TipCalculator> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("\$"),
-                    Text("000", style: TextStyle(fontSize: 60)),
+                    Text("111", style: TextStyle(fontSize: 60)),
                   ],
                 ),
                 Container(height: 1, width: 240, color: Colors.grey),
