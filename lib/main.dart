@@ -30,7 +30,7 @@ class _TipCalculatorState extends State<TipCalculator> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 70.0,bottom: 20),
+            padding: const EdgeInsets.only(top: 60.0,bottom: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
