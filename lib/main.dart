@@ -265,7 +265,7 @@ class _TipCalculatorState extends State<TipCalculator> {
                   ),
                   child: Center(
                     child: Text(
-                      "20%",
+                      "Custom Tip",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
