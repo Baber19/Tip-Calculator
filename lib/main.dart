@@ -20,7 +20,7 @@ class TipCalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.blueGrey,
       body: Column(
         children: [
           Padding(
@@ -136,62 +136,222 @@ class TipCalculator extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 30,),
+          SizedBox(height: 30),
           Padding(
-            padding: const EdgeInsets.only(left: 40.0,right: 40),
+            padding: const EdgeInsets.only(left: 40.0, right: 40),
             child: Row(
               // mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Enter",style: TextStyle(fontWeight: FontWeight.bold),),
-                    Text("your bill")
+                    Text(
+                      "Enter",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Text("your bill"),
                   ],
                 ),
-                SizedBox(width: 20,),
+                SizedBox(width: 20),
                 Expanded(
                   child: TextField(
-                    
                     decoration: InputDecoration(
                       fillColor: Colors.white,
                       filled: true,
-                      prefixIcon: Icon(Icons.attach_money),
-                      border: InputBorder.none
-
+                      prefixIcon: Icon(Icons.attach_money, color: Colors.black),
+                      border: InputBorder.none,
                     ),
                   ),
-                )
-
+                ),
               ],
             ),
           ),
-          SizedBox(height: 30,),
+          SizedBox(height: 30),
           Padding(
-            padding: const EdgeInsets.only(left: 40.0,right: 40),
+            padding: const EdgeInsets.only(left: 40.0, right: 40),
             child: Row(
               // mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Choose",style: TextStyle(fontWeight: FontWeight.bold),),
-                    Text("your tip")
+                    Text(
+                      "Choose",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Text("your tip"),
                   ],
                 ),
-                SizedBox(width: 20,),
+                SizedBox(width: 20),
+                Container(
+                  height: 40,
+                  width: 66,
+                  decoration: BoxDecoration(
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "10%",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 5),
+
+                Container(
+                  height: 40,
+                  width: 66,
+                  decoration: BoxDecoration(
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "15%",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 5),
+
+                Container(
+                  height: 40,
+                  width: 66,
+                  decoration: BoxDecoration(
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "20%",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.only(right: 43.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  height: 40,
+                  width: 208,
+                  decoration: BoxDecoration(
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "20%",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 30),
+          Padding(
+            padding: const EdgeInsets.only(left: 40.0, right: 37),
+            child: Row(
+              // mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Split",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Text("the total"),
+                  ],
+                ),
+                SizedBox(width: 15),
                 Container(
                   height: 40,
                   width: 70,
                   decoration: BoxDecoration(
                     color: Colors.teal,
-                    borderRadius: BorderRadius.circular(5)
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(5),
+                      bottomLeft: Radius.circular(5),
+                    ),
                   ),
-                )
+                  child: Center(
+                    child: Text(
+                      "-",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+
+                Container(
+                  height: 40,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    // borderRadius: BorderRadius.only(topRight: Radius.circular(5),bottomRight: Radius.circular(5)),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "2",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 40,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(5),
+                      bottomRight: Radius.circular(5),
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "+",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
-
         ],
       ),
     );
