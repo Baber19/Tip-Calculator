@@ -20,7 +20,7 @@ class TipCalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.blueGrey[100],
       body: Column(
         children: [
           Padding(
@@ -71,7 +71,7 @@ class TipCalculator extends StatelessWidget {
             height: 210,
             width: 280,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Colors.white70,
               // border: Border.all(width: 1),
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
@@ -156,7 +156,7 @@ class TipCalculator extends StatelessWidget {
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
-                      fillColor: Colors.white,
+                      fillColor: Colors.white70,
                       filled: true,
                       prefixIcon: Icon(Icons.attach_money, color: Colors.black),
                       border: InputBorder.none,
@@ -290,7 +290,7 @@ class TipCalculator extends StatelessWidget {
                 SizedBox(width: 15),
                 Container(
                   height: 40,
-                  width: 70,
+                  width: 65,
                   decoration: BoxDecoration(
                     color: Colors.teal,
                     borderRadius: BorderRadius.only(
@@ -312,9 +312,9 @@ class TipCalculator extends StatelessWidget {
 
                 Container(
                   height: 40,
-                  width: 70,
+                  width: 80,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.white70,
                     // borderRadius: BorderRadius.only(topRight: Radius.circular(5),bottomRight: Radius.circular(5)),
                   ),
                   child: Center(
@@ -330,7 +330,7 @@ class TipCalculator extends StatelessWidget {
                 ),
                 Container(
                   height: 40,
-                  width: 70,
+                  width: 65,
                   decoration: BoxDecoration(
                     color: Colors.teal,
                     borderRadius: BorderRadius.only(
@@ -352,6 +352,7 @@ class TipCalculator extends StatelessWidget {
               ],
             ),
           ),
+          Text("ok")
         ],
       ),
     );
