@@ -14,9 +14,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class TipCalculator extends StatelessWidget {
+class TipCalculator extends StatefulWidget {
   const TipCalculator({super.key});
 
+  @override
+  State<TipCalculator> createState() => _TipCalculatorState();
+}
+
+class _TipCalculatorState extends State<TipCalculator> {
+  int counter = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -288,23 +294,30 @@ class TipCalculator extends StatelessWidget {
                   ],
                 ),
                 SizedBox(width: 15),
-                Container(
-                  height: 40,
-                  width: 65,
-                  decoration: BoxDecoration(
-                    color: Colors.teal,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(5),
-                      bottomLeft: Radius.circular(5),
+                InkWell(
+                  onTap: (){
+                    setState(() {
+                      counter--;
+                    });
+                  },
+                  child: Container(
+                    height: 40,
+                    width: 65,
+                    decoration: BoxDecoration(
+                      color: Colors.teal,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(5),
+                        bottomLeft: Radius.circular(5),
+                      ),
                     ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "-",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                    child: Center(
+                      child: Text(
+                        "-",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
@@ -319,7 +332,7 @@ class TipCalculator extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      "2",
+                      counter.toString(),
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 20,
@@ -328,23 +341,30 @@ class TipCalculator extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  height: 40,
-                  width: 65,
-                  decoration: BoxDecoration(
-                    color: Colors.teal,
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(5),
-                      bottomRight: Radius.circular(5),
+                InkWell(
+                  onTap: (){
+                    setState(() {
+                      counter++;
+                    });
+                  },
+                  child: Container(
+                    height: 40,
+                    width: 65,
+                    decoration: BoxDecoration(
+                      color: Colors.teal,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(5),
+                        bottomRight: Radius.circular(5),
+                      ),
                     ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "+",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                    child: Center(
+                      child: Text(
+                        "+",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
@@ -352,7 +372,6 @@ class TipCalculator extends StatelessWidget {
               ],
             ),
           ),
-          Text("ok")
         ],
       ),
     );
